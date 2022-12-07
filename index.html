@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav id="navbar">
+        <div id="box">
+            <button id="pnk" class="btn "></button>
+            <button id="ble" class="btn"></button>
+            <button  id="grn" class="btn"></button>
+            <button id="blck" class="btn"></button>
+        </div>
+        <!-- <div id="icon">
+            <span><i class="fa-solid fa-plus"></i></span>
+            <span><i class="fa-solid fa-trash"></i></span>
+        </div> -->
+        <div class="icon">
+            <div class="adder-btn" id = "adder-btn"><i class="fa-solid fa-plus fa-2x"></i></div>
+            <div class="delete-btn"><i class="fa-solid fa-trash fa-2x"></i></div>
+        </div>
+    </nav>
+    <section class = "new-ticket-section" id = "new-ticket-section">
+        <textarea name="text-input" class = "text-input"id="text" cols="40" rows="10"></textarea>
+        <div class="color-picker">
+            <div class="color-items">
+            <div class="colors red" onclick="ticket_color('red')"></div>
+            <div class="colors blue" onclick="ticket_color('blue')"></div>
+            <div class="colors green" onclick="ticket_color('green')"></div>
+            <div class="colors black" onclick="ticket_color('black')"></div>
+        </div>
+        </div>
+    </section>
+    <script src="./script.js"></script>
+</body>
+</html>
