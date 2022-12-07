@@ -47,6 +47,7 @@ function addTicket() {
 }
 
 function displayTicketsOnPanel() {
+    TicketPanel.innerHTML = "";
     for (var i = 0; i < ticketData.length; i++) {
         const card = document.createElement('div');
         card.setAttribute("class", "card");
@@ -98,13 +99,7 @@ function getSelected() {
     return answer;
 }
 
-function deselectAnswers() {
-    answerEls.forEach((answerEl) => {
-        answerEl.checked = false;
-    });
-}
-
-function setdeleteTicket(delIndex) {
+function DeleteTicket(delIndex) {
     for (var i = 0; i < ticketData.length; i++) {
         if (i == delIndex) {
             for (var j = i; j < ticketData.length; j++)
@@ -113,6 +108,10 @@ function setdeleteTicket(delIndex) {
     }
     ticketData.pop();
     displayTicketsOnPanel();
+}
+
+function setDeleteTicket(delIndex) {
+    delBtn.setAttribute("onclick", `DeleteTicket(${delIndex})`);
 }
 
 function createTicketFile() {
